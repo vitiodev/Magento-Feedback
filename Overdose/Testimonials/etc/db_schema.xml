@@ -1,0 +1,12 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="feedback_list" resource="default" engine="innodb" >
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true" />
+        <column xsi:type="varchar" name="title" nullable="false" length="255" />
+        <column xsi:type="text" name="message" nullable="false" />
+        <column xsi:type="varchar" name="img_url" nullable="false" length="255" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
